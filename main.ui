@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1031</width>
-    <height>669</height>
+    <height>702</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,10 +18,36 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>50</y>
       <width>1011</width>
       <height>601</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_add">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Добавить</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_change">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>10</y>
+      <width>171</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Редактировать</string>
     </property>
    </widget>
   </widget>
