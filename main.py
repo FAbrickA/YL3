@@ -1,16 +1,17 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QTableWidgetItem, QDialog, QMessageBox
-from PyQt5.uic import loadUi
+from UI.main import Ui_MainWindow
+from UI.addEditCoffeeForm import Ui_Dialog
 import sqlite3
 import sys
 
 
-class MyApp(QMainWindow):
+class MyApp(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.db_path = "coffee.sqlite"
         self.active_row = None
 
-        loadUi("main.ui", self)
+        self.setupUi(self)
 
         self.setup_logic()
 
@@ -82,7 +83,7 @@ class MyApp(QMainWindow):
                 self.table_widget.setItem(i, j, QTableWidgetItem(str(col)))
 
 
-class MyDialog(QDialog):
+class MyDialog(QDialog, Ui_Dialog):
     OK = 0
     BAD = 1
 
@@ -93,7 +94,7 @@ class MyDialog(QDialog):
         self.result = self.BAD
         self.data = None
 
-        loadUi("addEditCoffeeForm.ui", self)
+        self.setupUi(self)
         self.label_title.setText(self.title)
         self.setWindowTitle(self.title)
         if props is not None:
